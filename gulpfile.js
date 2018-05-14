@@ -143,9 +143,9 @@ gulp.task("webp:convert", ["webp:copy"], function() {
 
 // SVG-SPRITE
 
-// gulp.task("svg-sprite:del", function() {
-//   return del("build/img/svg-sprite");
-// });
+gulp.task("svg-sprite:del", function() {
+  return del("build/img/svg-sprite");
+});
 
 gulp.task("svg-sprite", ["svg-sprite:del"], function() {
   var svgs = gulp.src("src/img/svg/*.svg")
