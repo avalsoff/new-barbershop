@@ -1,40 +1,116 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <!-- <base href="/">-->
-  <title>OptimizedHTML 4</title>
-  <meta name="description" content="">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- Template Basic Images Start-->
-  <meta property="og:image" content="path/to/image.jpg">
-  <link rel="icon" href="img/favicon/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-  <!-- Template Basic Images End-->
-  <!-- Custom Browsers Color Start-->
-  <meta name="theme-color" content="#000">
-  <!-- Custom Browsers Color End-->
-  <!-- Fonts Start -->
-  <link href="https://fonts.googleapis.com/css?family=Geo:400i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
-  <!-- Fonts End -->
-  <link rel="stylesheet" href="css/main.min.css">
-  
+  <!-- partial:partials/_head.html -->
+  <!-- partial -->
 </head>
-  <body class="page">
-    <div class="visually-hidden">
-      <!-- inject:svg --><!-- endinject -->
-    </div>
-      <!-- partial:partials/_mypartial.html -->
-      <!-- partial -->
-    <header class="page__header">
-      <nav class="main-nav">
-        <div class="logo">
-          <img src="" alt="" class="logo__image">
+<body class="page">
+  <div class="visually-hidden">
+    <!-- inject:svg --><!-- endinject -->
+  </div>
+  
+  <!-- partial:partials/_header.html -->
+  <!-- partial -->
+  
+  <main class="page__main">
+    <h1 class="visually-hidden">Барбершоп Бородинский</h1>
+    <section class="feautures">
+      <h2 class="visually-hidden">Барбершоп в цифрах</h2>
+      <header class="feautures__header">
+        <b class="feautures__slogan">Стрижка у нас это выгодно!</b>
+        <p class="feautures__description">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+        <small class="feautures__footnote">* — приведенные данные ложь</small>
+      </header>
+      <table class="feautures__items">
+        <!-- don't forget about tbody -->
+        <tr class="feautures__item">
+          <td class="feautures__value">1 500<sup>*</sup></td>
+          <td class="feautures__key">рублей вложений</td>
+        </tr>
+        <tr class="feautures__item">
+          <td class="feautures__value">7 200</td>
+          <td class="feautures__key">секунд времени мастера</td>
+        </tr>
+        <tr class="feautures__item">
+          <td class="feautures__value">90 000</td>
+          <td class="feautures__key">постриженных волос</td>
+        </tr>
+        <tr class="feautures__item">
+          <td class="feautures__value">500 000<sup>*</sup></td>
+          <td class="feautures__key">лайков и комплементов</td>
+        </tr>
+      </table>
+    </section>
+    <section class="advantages">
+      <h2 class="visually-hidden">Наши приемущества</h2>
+      <ul class="advantages__items">
+        <li class="advantages__item">
+          <h3 class="advantages__caption">Быстро</h3>
+          <p class="advantages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__caption">Круто</h3>
+          <p class="advantages__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.
+          </p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__caption">Дорого</h3>
+          <p class="advantages__description">Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
+        </li>
+      </ul>
+    </section>
+    <section class="news">
+      <header class="header-panel">
+        <h2 class="header-panel__heading">
+          Новости и акции
+        </h2>
+        <a href="#" class="header-panel__button button">Показать все</a>
+      </header>
+      <ul class="news__items">
+        <li class="news__item new">
+          <time class="new__date">29 Сент</time>
+          <p class="new__text">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
+        </li>
+        <li class="news__item new">
+          <time class="new__date">19 Сент</time>
+          <p class="new__text">В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!</p>
+        </li>
+        <li class="news__item new">
+          <time class="new__date">9 Сент</time>
+          <p class="new__text">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
+        </li>
+      </ul>
+    </section>
+    <section class="reviews">
+      <header class="header-panel">
+        <h2 class="header-panel__heading">
+          Отзывы о нас
+        </h2>
+        <a href="#" class="header-panel__button button">Оставить свой</a>
+      </header>
+      <div class="slideshow">
+        <ul class="slideshow__slides">
+          <li class="slideshow__slide review">
+            <img src="" alt="Фотография клиента" class="review__photo">
+            <strong class="review__name">Трэвис Баркер</strong>
+            <p class="review__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+          </li>
+        </ul>
+        <div class="slideshow__nav">
+          <button class="slideshow__button slideshow__button--prev"></button>
+          <button class="slideshow__button slideshow__button--next"></button>
         </div>
-      </nav>
-    </header>
-    <script src="js/index.min.js"></script>
-  </body>
-  </html>
+        <div class="slideshow__dots">
+          <button class="slideshow__dot--active slideshow__dot"></button>
+          <button class="slideshow__dot"></button>
+          <button class="slideshow__dot"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- partial:partials/_footer.html -->
+  <!-- partial -->
+  <script src="js/index.min.js"></script>
+</body>
+</html>
