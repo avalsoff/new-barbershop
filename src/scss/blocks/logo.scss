@@ -1,0 +1,15 @@
+.logo {
+  position: relative;
+  display: block;
+  margin: 29px auto 26px auto;
+  width: 226px;
+  height: 30px;
+  overflow: hidden;
+
+  &__image {
+    display: block;
+    object-fit: cover;
+    position: absolute;
+    top: -32px;
+  }
+}
