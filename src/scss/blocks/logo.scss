@@ -1,15 +1,29 @@
 .logo {
   position: relative;
   display: block;
-  margin: 29px auto 26px auto;
-  width: 226px;
-  height: 30px;
-  overflow: hidden;
+  width: 100%;
+  height: 86px;
+  background-color: $bg-mobile;
 
   &__image {
-    display: block;
-    object-fit: cover;
     position: absolute;
-    top: -32px;
+    width: 262px;
+    top: -9px;
+    left: 50%;
+    transform: translate(-50%);
   }
+
+  @media only screen and (min-width: $tablet-width) {
+    background-image: url("./../img/back-desktop.jpg");
+    background-size: cover;
+    background-position: 0 20%;
+    background-repeat: no-repeat;
+    height: 397px;
+
+    &__image {
+      width: 370px;
+      top: 39px;
+    }
+  }
+
 }
