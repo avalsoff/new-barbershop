@@ -138,6 +138,27 @@
     }
     
   }
+
+  @media only screen and (min-width: $desktop-width) {
+    &__link {
+      padding: 24px 30px;
+
+      &--login {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        &::before {
+          top: 26px;
+        }
+      }
+    }
+
+    &__item--active::after {
+      left: 30px;
+      right: 30px;
+    }
+  }
 }
 
 @media only screen and (max-width: $mobile-width-only) {
