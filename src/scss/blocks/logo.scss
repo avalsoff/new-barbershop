@@ -4,26 +4,49 @@
   width: 100%;
   height: 86px;
   background-color: $bg-mobile;
-
+  
   &__image {
     position: absolute;
     width: 262px;
-    top: -9px;
+    top: -31px;
     left: 50%;
     transform: translate(-50%);
   }
 
+  &__barbershop {
+    display: none;
+  }
+
+  &__mustache {
+    display: none;
+  }
+  
   @media only screen and (min-width: $tablet-width) {
     background-image: url("./../img/back-desktop.jpg");
     background-size: cover;
     background-position: 0 20%;
     background-repeat: no-repeat;
     height: 397px;
-
+    
     &__image {
-      width: 370px;
+      width: 369px;
       top: 39px;
     }
+    
+    &__barbershop {
+      display: inline-block;
+    }
   }
-
+  
+  @media only screen and (min-width: $desktop-width) {
+    height: 648px;
+    &__image {
+      width: 370px;
+    }
+    
+    &__mustache {
+      display: inline-block;
+    }
+  } 
+  
 }
