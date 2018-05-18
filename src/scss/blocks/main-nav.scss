@@ -1,5 +1,6 @@
 .main-nav {
   position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   background-color: $bg-mobile;
@@ -37,7 +38,7 @@
       background-color: $accent-dark;
       border: none;
       box-shadow: none;
-      text-transform: capitalize;
+      text-transform: none;
       font-weight: 400;
       
       &::before {
@@ -211,6 +212,10 @@
     &__item--active::after {
       left: 30px;
       right: 30px;
+    }
+    
+    &__wrapper::before {
+      display: none;
     }
   }
 }
