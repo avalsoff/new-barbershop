@@ -1,0 +1,45 @@
+.advantages {
+  position: relative;
+  overflow: hidden;
+  padding: 25px 40px 85px;
+  background-color: $bg-mobile;
+  color: $text-dark;
+
+  &::after {
+    position: absolute;
+    left: -3px;
+    right: -3px;
+    bottom: -6px;
+    content: url(../img/angle-mask.svg);
+  }
+  
+  &__items {
+    @include list-reboot;
+  }
+  
+  &__item {
+    padding-top: 100px;
+    
+    &--fast {
+      background-image: url("../img/advantages-scissors.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-size: 94px;
+    }
+  }
+  
+  &__caption {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  &__description {
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+  }
+}
