@@ -72,6 +72,8 @@ gulp.task("js:del", function() {
 
 gulp.task("js", ["js:del"], function() {
   gulp.src([
+    // "src/libs/glide/glide.min.js",
+    "src/libs/flickity/flickity.min.js",
     "src/js/*.js" // At the end
   ])
   .pipe(plumber())

@@ -1,7 +1,7 @@
+@import "global/libraries";
 @import "global/mixins";
 @import "global/variables";
 @import "global/fonts";
-@import "global/libraries";
 @import "global/scaffolding";
 
 @import "blocks/page";
@@ -9,3 +9,4 @@
 @import "blocks/logo";
 @import "blocks/feautures";
 @import "blocks/advantages";
+@import "blocks/flickity";

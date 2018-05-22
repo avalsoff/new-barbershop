@@ -1,0 +1,16 @@
+.flickity {
+  &-page-dots {
+    .dot {
+      opacity: 1;
+      width: 8px;
+      height: 8px;
+      border-radius: 0;
+      border: 1px solid #fff;
+      transform: rotate(45deg);
+
+      &.is-selected {
+        background-color: #fff;
+      }
+    }
+  }
+}

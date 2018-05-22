@@ -4,27 +4,36 @@
   padding: 25px 40px 85px;
   background-color: $bg-mobile;
   color: $text-dark;
-
+  
   &::after {
     position: absolute;
     left: -3px;
     right: -3px;
-    bottom: -6px;
+    bottom: -7px;
     content: url(../img/angle-mask.svg);
   }
-  
+
   &__items {
     @include list-reboot;
   }
   
   &__item {
-    padding-top: 100px;
-    
+    width: 100%;
+    padding-top: 100px;    
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 94px;
+
     &--fast {
       background-image: url("../img/advantages-scissors.svg");
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      background-size: 94px;
+    }
+
+    &--cool {
+      background-image: url("../img/advantages-chair.svg");
+    }
+
+    &--expensive {
+      background-image: url("../img/advantages-statue.svg");
     }
   }
   

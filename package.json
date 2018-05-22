@@ -5,6 +5,15 @@
   "main": "index.js",
   "author": "avalsoff",
   "license": "ISC",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "browserslist": [
+    "last 15 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "css-mqpacker": "^6.0.2",
@@ -27,14 +36,5 @@
     "gulp-webp": "^3.0.0",
     "node-normalize-scss": "^8.0.0",
     "run-sequence": "^2.2.1"
-  },
-  "scripts": {
-    "build": "gulp build",
-    "start": "gulp"
-  },
-  "browserslist": [
-    "last 15 versions",
-    "IE 11",
-    "Firefox ESR"
-  ]
+  }
 }
