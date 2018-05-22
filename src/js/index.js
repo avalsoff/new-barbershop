@@ -1,26 +1,21 @@
-// new Glide('.glide').mount();
-// var width = 0;
-// var glide = new Glide('.glide').mount();
-// setTimeout(function() {  
-//   // glide.destroy();
-//   flkty.destroy();
-// }, 5000);
-
-var elem = document.querySelector('.glide__slides');
-var flkty = new Flickity( elem, {
-  // options
+var advantagesCarousel = document.querySelector('.glide__slides');
+var flktyOptions = {
   cellAlign: 'left',
   prevNextButtons: false,  
   wrapAround: true,
-  contain: true
-});
+  contain: true,
+  // adaptiveHeight: true
+};
+var isFlktyAdvantages = false;
+var width;
+var flktyAdvantages;
+updateWindowSize();
+updateAdvantagesState();
 
-
-// element argument can be a selector string
-//   for an individual element
-// var flkty = new Flickity( '.glide__slides', {
-//   // options
-// });
+window.onresize = function(event) {
+  updateWindowSize();
+  updateAdvantagesState();
+}
 
 function updateWindowSize() {
   if (document.body && document.body.offsetWidth) {
@@ -36,6 +31,12 @@ function updateWindowSize() {
   }
 }
 
-window.onresize = function(event) {
-  updateWindowSize();
+function updateAdvantagesState() {
+  if (width >= 640 && isFlktyAdvantages) {
+    flktyAdvantages.destroy();
+    isFlktyAdvantages = !isFlktyAdvantages;
+  } else if (width < 640 && !isFlktyAdvantages) {
+    flktyAdvantages = new Flickity(advantagesCarousel, flktyOptions);
+    isFlktyAdvantages = !isFlktyAdvantages;
+  }
 }

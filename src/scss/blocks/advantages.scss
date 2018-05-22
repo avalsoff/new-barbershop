@@ -1,9 +1,13 @@
 .advantages {
   position: relative;
   overflow: hidden;
-  padding: 25px 40px 85px;
+  padding: 25px 40px 75px;
   background-color: $bg-mobile;
   color: $text-dark;
+  // background-image: url(../img/angle-mask.svg);
+  // background-repeat: no-repeat;
+  // background-position-y: bottom;  
+  // clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
   
   &::after {
     position: absolute;
@@ -12,26 +16,27 @@
     bottom: -7px;
     content: url(../img/angle-mask.svg);
   }
-
+  
   &__items {
     @include list-reboot;
   }
   
   &__item {
     width: 100%;
-    padding-top: 100px;    
+    padding-top: 100px;
+    padding-bottom: 10px;  
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: 94px;
-
+    
     &--fast {
       background-image: url("../img/advantages-scissors.svg");
     }
-
+    
     &--cool {
       background-image: url("../img/advantages-chair.svg");
     }
-
+    
     &--expensive {
       background-image: url("../img/advantages-statue.svg");
     }
@@ -50,5 +55,72 @@
     font-size: 20px;
     line-height: 27px;
     text-align: center;
+  }
+  
+  @media only screen and (min-width: $tablet-width) {
+    padding: 0;
+    padding-bottom: 60px;
+    padding-top: 20px;
+    background-color: $bg-dark;
+    &::after {
+      content: url(../img/angle-mask-tablet.svg);
+    }
+    
+    &__items {
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    &__item {
+      padding-top: 0;
+      padding-left: 120px;
+      background-position: 0 3px;
+      border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+      
+      &:last-child {
+        border: none;
+      }
+    }
+    
+    &__caption {
+      text-align: left;
+      margin-bottom: 14px;
+    }
+    
+    &__description {
+      text-align: left;
+      margin-top: 0;
+    }
+  }
+  
+  @media only screen and (min-width: $desktop-width) {
+    padding: 79px 0 90px;
+    
+    &__items {
+      display: flex;
+      max-width: 960px;
+    }
+    
+    &__item {
+      padding: 100px 38px 0;
+      border: none;
+      border-right: 1px solid rgba(#fff, .1);
+      background-position: 50% 0;
+      flex-grow: 1;
+      
+      &:first-child {        
+        width: 310px;
+        flex: 0 0 auto;
+      }
+    }
+    
+    &__caption {
+      text-align: center;
+    }
+    
+    &__description {
+      text-align: center;
+    }
   }
 }
