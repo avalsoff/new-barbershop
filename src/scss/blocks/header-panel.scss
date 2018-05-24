@@ -36,4 +36,8 @@
       }
     }
   }
+
+  @media only screen and (min-width: $desktop-width) {
+    padding-left: 70px;
+  }
 }

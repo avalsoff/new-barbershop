@@ -1,5 +1,7 @@
-var advantagesCarousel = document.querySelector('.glide__slides');
-var flktyOptions = {
+var width;
+
+var advantagesCarousel = document.querySelector('.advantages__items');
+var advOptions = {
   cellAlign: 'left',
   prevNextButtons: false,  
   wrapAround: true,
@@ -7,8 +9,18 @@ var flktyOptions = {
   // adaptiveHeight: true
 };
 var isFlktyAdvantages = false;
-var width;
 var flktyAdvantages;
+
+var reviewsCarousel = document.querySelector('.reviews__items');
+var reviewOptions = {  
+  cellAlign: 'left',
+  // prevNextButtons: false,
+  // pageDots: false,
+  wrapAround: true,
+  contain: true
+}
+flktyReviews = new Flickity(reviewsCarousel, reviewOptions);
+
 updateWindowSize();
 updateAdvantagesState();
 
@@ -36,7 +48,7 @@ function updateAdvantagesState() {
     flktyAdvantages.destroy();
     isFlktyAdvantages = !isFlktyAdvantages;
   } else if (width < 640 && !isFlktyAdvantages) {
-    flktyAdvantages = new Flickity(advantagesCarousel, flktyOptions);
+    flktyAdvantages = new Flickity(advantagesCarousel, advOptions);
     isFlktyAdvantages = !isFlktyAdvantages;
   }
 }

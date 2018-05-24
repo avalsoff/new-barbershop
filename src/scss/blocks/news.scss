@@ -1,6 +1,6 @@
 .news {
   background-color: $bg-light;
-  padding: 35px 0 40px;
+  padding: 35px 0 30px;
   
   &__items {
     @include list-reboot;
@@ -20,6 +20,7 @@
   }
   
   @media only screen and (min-width: $tablet-width) {
+    padding-bottom: 0;
     &__wrapper {
       max-width: 640px;
       margin-left: auto;
@@ -31,7 +32,6 @@
       padding-bottom: 20px;
       margin-top: 50px;
       display: flex;
-      border-bottom: 1px solid #e5ddd5;
     }
     
     &__item {
@@ -50,6 +50,9 @@
     }
     &__wrapper {
       max-width: 960px;
+    }
+    &__items {
+      border: none;
     }
   }
 }

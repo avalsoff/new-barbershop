@@ -1,9 +1,12 @@
 .flickity {
   &-page-dots {
+    left: 0;
     .dot {
       position: relative;
+      content: "";
       width: 30px;
       height: 30px;
+      // margin-bottom: 1px;
       opacity: 1;
       margin: 0 3px;
       border-radius: 0;
@@ -22,6 +25,70 @@
       &.is-selected::after {
         background-color: #fff;
       }
+    }
+  }
+}
+
+//Reviews slider
+.reviews {
+  .flickity-page-dots {
+    bottom: -18px;
+  }
+  .dot {
+    position: relative;
+    background-color: #f8f5f2;
+    margin: 0;
+    width: 35px;
+    &::after {
+      border: 1px solid $bg-dark;
+    }
+    &.is-selected::after {
+      background-color: $bg-dark;
+    }
+    &:last-child::before,
+    &:first-child::before {
+      position: absolute;
+      content: "";
+      background-color: #f8f5f2;
+      width: 30px;
+      height: 30px;
+      right: -20px;
+    }
+    &:first-child::before {
+      left: -20px;
+    }
+  }
+  .previous,
+  .next {
+    display: none;
+  }
+  
+  @media only screen and (min-width: $tablet-width) {
+    .previous,
+    .next {
+      display: block;
+      height: 100%;
+      background-color: #f8f5f2;
+      opacity: 1;
+      border: 1px solid #e5ddd5;
+      border-radius: 0;
+      width: 50px;
+      padding: 0;
+    }
+    .previous {
+      left: 0;
+    }
+    .next {
+      right: 0;
+    }
+    .flickity-viewport {      
+      border: 1px solid #e5ddd5;
+    }
+  }
+  
+  @media only screen and (min-width: $desktop-width) {    
+    .flickity-page-dots {
+      bottom: -60px;
     }
   }
 }

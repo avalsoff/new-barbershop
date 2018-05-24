@@ -58,25 +58,21 @@
     
     <section class="advantages">      
       <h2 class="visually-hidden">Наши приемущества</h2>
-      <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="advantages__items glide__slides">
-            <li class="advantages__item advantages__item--fast glide__slide carousel-cell">
-              <h3 class="advantages__caption">Быстро</h3>
-              <p class="advantages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
-            </li>
-            <li class="advantages__item advantages__item--cool glide__slide carousel-cell">
-              <h3 class="advantages__caption">Круто</h3>
-              <p class="advantages__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.
-              </p>
-            </li>
-            <li class="advantages__item advantages__item--expensive glide__slide carousel-cell">
-              <h3 class="advantages__caption">Дорого</h3>
-              <p class="advantages__description">Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
-            </li>
-          </ul>      
-        </div>
-      </div>
+      <ul class="advantages__items">
+        <li class="advantages__item advantages__item--fast carousel-cell">
+          <h3 class="advantages__caption">Быстро</h3>
+          <p class="advantages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
+        </li>
+        <li class="advantages__item advantages__item--cool carousel-cell">
+          <h3 class="advantages__caption">Круто</h3>
+          <p class="advantages__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.
+          </p>
+        </li>
+        <li class="advantages__item advantages__item--expensive carousel-cell">
+          <h3 class="advantages__caption">Дорого</h3>
+          <p class="advantages__description">Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
+        </li>
+      </ul>  
     </section>
     
     <section class="news">
@@ -105,28 +101,43 @@
       <a href="#" class="header-panel__button header-panel__button--mobile button">Показать все</a>
     </section>
     <section class="reviews">
-      <header class="header-panel">
-        <h2 class="header-panel__heading">
-          Отзывы о нас
-        </h2>
-        <a href="#" class="header-panel__button button">Оставить свой</a>
-      </header>
-      <div class="slideshow">
-        <ul class="slideshow__slides">
-          <li class="slideshow__slide review">
-            <img src="" alt="Фотография клиента" class="review__photo">
-            <strong class="review__name">Трэвис Баркер</strong>
-            <p class="review__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
-          </li>
-        </ul>
-        <div class="slideshow__nav">
-          <button class="slideshow__button slideshow__button--prev"></button>
-          <button class="slideshow__button slideshow__button--next"></button>
-        </div>
-        <div class="slideshow__dots">
-          <button class="slideshow__dot--active slideshow__dot"></button>
-          <button class="slideshow__dot"></button>
-          <button class="slideshow__dot"></button>
+      <div class="reviews__wrapper">
+        <header class="header-panel">
+          <h2 class="header-panel__heading">
+            Отзывы о нас
+          </h2>
+          <a href="#" class="header-panel__button button">Оставить свой</a>
+        </header>
+        <div class="reviews__carousel">
+          <ul class="reviews__items">
+            <li class="reviews__item review">
+              <div class="review__photo-wrapper">
+                <img src="img/review-1.jpg" alt="Фотография клиента" class="review__photo">
+              </div>
+              <div class="review__text-wrapper">
+                <strong class="review__name">Трэвис Баркер</strong>
+                <p class="review__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+              </div>
+            </li>            
+            <li class="reviews__item review">
+              <div class="review__photo-wrapper">
+                <img src="img/review-1.jpg" alt="Фотография клиента" class="review__photo">
+              </div>
+              <div class="review__text-wrapper">
+                <strong class="review__name">Трэвис Баркер</strong>
+                <p class="review__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+              </div>
+            </li>            
+            <li class="reviews__item review">
+              <div class="review__photo-wrapper">
+                <img src="img/review-1.jpg" alt="Фотография клиента" class="review__photo">
+              </div>
+              <div class="review__text-wrapper">
+                <strong class="review__name">Трэвис Баркер</strong>
+                <p class="review__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+              </div>
+            </li>            
+          </ul>
         </div>
       </div>
     </section>
