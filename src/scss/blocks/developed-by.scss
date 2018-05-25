@@ -1,0 +1,50 @@
+.developed-by {
+  &__text {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  &__link {    
+    display: inline-block;
+    padding: 12px;
+    margin-top: 15px;
+    width: 100%;
+    border: 1px solid #3f3f3f;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:hover {
+      // text-decoration: underline;   
+      border: 1px solid #777;
+    }
+
+    &:active {
+      border: 1px solid #aaa;
+      opacity: 0.3;
+    }
+  }
+
+  &--tablet {
+    width: 160px;
+    display: none;
+  }
+
+  
+  @media only screen and (min-width: $tablet-width) {
+    display: none;
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media only screen and (min-width: $desktop-width) {
+    width: 160px;
+    display: block;
+    &--tablet {
+      display: none;
+    }
+  }
+
+}

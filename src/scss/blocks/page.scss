@@ -17,6 +17,12 @@
     margin-bottom: 50px;
   }
   
+  &__footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: $bg-darkest;
+  }
+  
   @media only screen and (min-width: $tablet-width) {  
     &__inner {  
       max-width: 640px;
@@ -24,6 +30,12 @@
     
     &__header {
       margin-bottom: 0;
+    }
+
+    &__footer {
+      
+    padding-top: 40px;
+    padding-bottom: 40px;
     }
   }
   

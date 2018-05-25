@@ -1,5 +1,6 @@
 .flickity {
   &-page-dots {
+    z-index: 1000;
     left: 0;
     .dot {
       position: relative;
