@@ -5,6 +5,7 @@
 /**/package-lock.json
 /**/Thumbs.db
 /**/*.DS_Store
+/**/desktop.ini
 debug.log
 /build/
 example.js
