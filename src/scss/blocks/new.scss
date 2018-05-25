@@ -3,6 +3,24 @@
   align-items: flex-start;
   margin-top: 20px;
   margin-bottom: 20px;
+
+  &:hover {
+    .new {
+      &__date {
+        background-color: $accent;
+
+        &::after {
+          border-top-color: $accent;
+        }
+      }
+
+      &__text {
+        color: $accent;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
   
   &__date {
     position: relative;

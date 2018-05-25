@@ -1,4 +1,8 @@
-var width;
+var currentWidth;
+var tabletWidth  = 680;
+
+var hamburgerBtn = document.querySelector('.main-nav__hamburger');
+var mainNavMenu  = document.querySelector('.main-nav__menu');
 
 var advantagesCarousel = document.querySelector('.advantages__items');
 var advOptions = {
@@ -21,6 +25,15 @@ var reviewOptions = {
 }
 flktyReviews = new Flickity(reviewsCarousel, reviewOptions);
 
+
+mainNavMenu.classList.toggle('main-nav__menu--closed');
+
+hamburgerBtn.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  mainNavMenu.classList.toggle('main-nav__menu--closed');
+  mainNavMenu.classList.toggle('js-main-nav__menu--show'); 
+});
+
 updateWindowSize();
 updateAdvantagesState();
 
@@ -29,25 +42,33 @@ window.onresize = function(event) {
   updateAdvantagesState();
 }
 
+/*
+ *  Crossbrowser viewport width obtaining 
+ */
 function updateWindowSize() {
   if (document.body && document.body.offsetWidth) {
-    width = document.body.offsetWidth;
+    currentWidth = document.body.offsetWidth;
   }
   if (document.compatMode == 'CSS1Compat' &&
   document.documentElement &&
   document.documentElement.offsetWidth ) {
-    width = document.documentElement.offsetWidth;
+    currentWidth = document.documentElement.offsetWidth;
   }
   if (window.innerWidth) {
-    width = window.innerWidth;
+    currentWidth = window.innerWidth;
   }
 }
 
+/*
+ *  Destroys the carousel of the advantages section
+ *  when the current width is greater than the tablet width
+ *  and initializes new carousel when on the contrary.
+ */
 function updateAdvantagesState() {
-  if (width >= 640 && isFlktyAdvantages) {
+  if (currentWidth >= tabletWidth && isFlktyAdvantages) {
     flktyAdvantages.destroy();
     isFlktyAdvantages = !isFlktyAdvantages;
-  } else if (width < 640 && !isFlktyAdvantages) {
+  } else if (currentWidth < tabletWidth && !isFlktyAdvantages) {
     flktyAdvantages = new Flickity(advantagesCarousel, advOptions);
     isFlktyAdvantages = !isFlktyAdvantages;
   }

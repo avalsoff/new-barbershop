@@ -16,13 +16,15 @@
     font-weight: 700;
 
     &:hover {
-      // text-decoration: underline;   
-      border: 1px solid #777;
+      text-decoration: underline;      
+      border: 1px solid #545454;
     }
 
     &:active {
-      border: 1px solid #aaa;
-      opacity: 0.3;
+      border-color: transparent;
+      color: rgba($color: #fff, $alpha: .3);
+      background-color: #252525;
+      text-decoration: none;
     }
   }
 

@@ -1,0 +1,15 @@
+.js {
+  //js-main-nav__menu--show
+  &-main-nav__menu--show {
+    animation: menu-show .5s ease normal;
+  }
+}
+
+@keyframes menu-show {
+  0% {
+    transform: translate(100%); 
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
