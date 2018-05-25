@@ -20,8 +20,7 @@ const inject         = require("gulp-inject");
 const injectPartials = require("gulp-inject-partials");
 const run            = require("run-sequence");
 const del            = require("del");
-// var ghPages = require("gulp-gh-pages");
-
+var ghPages          = require("gulp-gh-pages");
 
 // CLEAN BUILD
 
@@ -68,7 +67,6 @@ gulp.task("style", function() {
 gulp.task("js:del", function() {
   return del("build/js");
 });
-
 
 gulp.task("js", ["js:del"], function() {
   gulp.src([
@@ -166,14 +164,12 @@ gulp.task("svg-sprite", ["svg-sprite:del"], function() {
   
 });
 
-
 //GH-PAGES
 
-// gulp.task("deploy", function() {
-//   return gulp.src("build/**/*")
-//     .pipe(ghPages());
-// });
-
+gulp.task("deploy", function() {
+  return gulp.src("build/**/*")
+    .pipe(ghPages());
+});
 
 // LIVE SERVER
 
