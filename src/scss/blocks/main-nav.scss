@@ -136,6 +136,12 @@
     &__hamburger {
       display: none;
     }
+
+    &__menu {      
+      width: 640px;
+      margin-right: auto;
+      margin-left: auto;
+    }
     
     &__links,
     &__login {
@@ -192,6 +198,10 @@
   }
   
   @media only screen and (min-width: $desktop-width) {
+    &__menu {      
+      width: 960px;
+    }
+
     &__link {
       padding: 24px 30px;
       
