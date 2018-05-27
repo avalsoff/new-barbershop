@@ -25,7 +25,8 @@
     color: #fff;
     text-align: center;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 700;    
+    transition: background-color .2s, color .2s, border .2s;
 
     &:hover {
       text-decoration: underline;      
@@ -56,7 +57,8 @@
     display: block;    
     border: 1px solid #3f3f3f;
     border-left: none;
-    width: 100%;
+    width: 100%;    
+    transition: background-color .2s, border .2s, opacity .18s;
 
     &:hover {
       border-color: #545454;

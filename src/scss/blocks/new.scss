@@ -3,17 +3,17 @@
   align-items: flex-start;
   margin-top: 20px;
   margin-bottom: 20px;
-
+  
   &:hover {
     .new {
       &__date {
         background-color: $accent;
-
+        
         &::after {
           border-top-color: $accent;
         }
       }
-
+      
       &__text {
         color: $accent;
         text-decoration: underline;
@@ -33,6 +33,7 @@
     text-transform: lowercase;
     line-height: 8px;
     font-size: 16px;
+    transition: background-color .2s;
     
     &::after {
       position: absolute;
@@ -44,6 +45,7 @@
       border-left: 25px solid transparent;
       border-right: 25px solid transparent;      
       border-top: 10px solid #000;
+      transition: border .3s;
     }
   }
   
@@ -59,14 +61,15 @@
     min-height: 80px;
     margin: 0;
     margin-top: -10px;
-    margin-left: 7%;
+    margin-left: 7%;    
+    transition: color .3s;
   }
-
+  
   @media only screen and (min-width: $tablet-width) {
     &__date {
       width: 50px;
     }
-
+    
     &__text {
       width: 210px;
       margin-left: 20px;

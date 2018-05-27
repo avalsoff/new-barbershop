@@ -36,6 +36,7 @@
     font-family: $default;
     font-weight: 700;
     text-transform: uppercase;
+    transition: background-color .2s, color .2s;
     
     &:active {
       opacity: 0.3;

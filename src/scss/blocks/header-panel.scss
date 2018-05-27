@@ -10,6 +10,7 @@
 
   &__button {
     display: none;
+    transition: background-color .2s, border .2s, color .18s;
 
     &:hover {
       border: 1px solid #d5c9bd;
