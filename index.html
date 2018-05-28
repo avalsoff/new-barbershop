@@ -1,502 +1,377 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Technomart - магазин строительной техники.</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&amp;subset=cyrillic" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+  <meta charset="utf-8">
+<!-- <base href="/">-->
+<title>Барбершоп "Бородинский"</title>
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Template Basic Images Start-->
+<meta property="og:image" content="path/to/image.jpg">
+<link rel="icon" href="img/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+<!-- Template Basic Images End-->
+<!-- Custom Browsers Color Start-->
+<meta name="theme-color" content="#000">
+<!-- Custom Browsers Color End-->
+<!-- Fonts Start -->
+<link href="https://fonts.googleapis.com/css?family=Geo:400i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+<!-- Fonts End -->
+<link rel="stylesheet" href="css/main.min.css">
 </head>
-
 <body class="page">
-  <header class="page__section page__section--theme--light main-header">    
-    <div class="main-header__menu">
-      <div class="page__content page__content--flex"> 
-        <a class="logo">
-          <img class="logo__image" src="img/techno-header-logo.svg" width="220" height="47" alt="Логотип магазина Техномарт">
-        </a>
-        <form class="search" action="https://echo.htmlacademy.ru">
-          <label class="search__label">
-            <input class="search__input" type="text" placeholder="Поиск:">
-            
-            <button class="search__button" type="submit">Найти</button>
-          </label>
-        </form>
-        <ul class="user-menu">
-          <li class="user-menu__item">
-            <a class="user-menu__link user-menu__link--bookmarks" href="#"><span class="user-menu__text">Закладки: 0</span></a>
-          </li><li class="user-menu__item">
-            <a class="user-menu__link user-menu__link--cart" href="#"><span class="user-menu__text">Корзина: 0</span></a>
-          </li><li class="user-menu__item">
-            <a class="user-menu__link user-menu__link--checkout" href="#">Оформить заказ</a>
-          </li>
-        </ul>      
-      </div>
-    </div>
-    <div class="main-header__main page__content">
-      <h1 class="visually-hidden">Строительный магазин "Техномарт"</h1>
-      <p class="description">
-        Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта
-      </p>
-      <div class="info">
-        <a class="info__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
-        <p class="info__addr">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-      </div>
-      <ul class="login-menu">
-        <li class="login-menu__item">
-          <a href="#" class="login-menu__link login-menu__link--login">Войти</a>
-        </li><li class="login-menu__item">
-          <a href="#" class="login-menu__link">Регистрация</a>
-        </li>
-      </ul> 
-    </div>
-    <div class="page__content">
-      <ul class="main-header__nav main-nav">
-        <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
-        <li class="main-nav__item"><a href="#" class="main-nav__link">Компания</a></li>
-        <li class="main-nav__item"><a href="catalog.html" class="main-nav__link">Каталог</a></li>
-        <li class="main-nav__item"><a href="#" class="main-nav__link">Новости</a></li>
-        <li class="main-nav__item"><a href="#" class="main-nav__link">Спецпредложение</a></li>
-        <li class="main-nav__item"><a href="#" class="main-nav__link">Доставка</a></li>
-        <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
-      </ul>
-    </div>
-  </header>
+  <div class="visually-hidden">
+    <!-- inject:svg --><svg xmlns="http://www.w3.org/2000/svg"><symbol id="beard-1" viewBox="0 0 51.5 49.5"><path d="M50.9 0h-.2c-2.3 7.7-2.9 17.1-9.4 20.6-1.2-3.4-4.1-4.9-7.4-6.4-2.1-.9-4.5-2.6-6.6-2.6-.5 0-1 0-1.5.3-.5-.3-1-.3-1.5-.3-2.1.1-4.5 1.7-6.6 2.6-3.3 1.5-6.3 3-7.4 6.4C3.8 17.1 3.2 7.7.9 0H.6C.3.7.2 1.6 0 2.4c0 1.9.5 21.5 1.9 28.4C3.2 37.2 8 41.7 12.7 44.7c3.3 2.1 8.5 4.8 13 4.8s9.7-2.8 13-4.8c4.7-3 9.6-7.5 10.8-13.8 1.4-7 1.9-26.5 1.9-28.4-.1-.9-.2-1.8-.5-2.5zM37 28.1c-.2 1.6-1.7 3.4-3.4 3.5-3 .2-4.5-4.4-7.9-4.4-3.4 0-4.9 4.5-7.9 4.4-1.7-.1-3.1-1.9-3.4-3.5-.3-1.9.6-4.6 1.7-5.6 1.1-1.1 2.8-.9 4.7-1.2 2-.3 3.8-.9 4.9-1.9 1.1 1.1 2.8 1.7 4.9 1.9 1.9.3 3.6.1 4.7 1.2 1.1 1 2 3.7 1.7 5.6z"/></symbol><symbol id="beard-2" viewBox="0 0 57.7 68.6"><path d="M51.6 22.2c.1-1.7.5-3.5.7-5.4.7-5.4 1.6-11.7-.1-16.8H52c-1.3 3.7-1.3 8.3-2.2 12.4-.7 3-1.8 5.7-3.2 7.6-.5.7-1.1 1.5-1.9 1.8-.7-3.9-4.3-4.9-7.7-6.4-2.1-.9-4-2-6.1-2.2-.8-.1-1.5.2-2 .2s-1.2-.3-2-.2c-2.1.1-4 1.3-6.1 2.2-3.4 1.4-7 2.4-7.7 6.4-.9-.3-1.4-1.1-1.9-1.8-1.5-1.9-2.6-4.6-3.2-7.6C7 8.3 7 3.7 5.7 0h-.2c-1.7 5.1-.8 11.4-.1 16.8.2 1.9.6 3.7.7 5.4.8 11.1-7 23.1-6 28.9.9 7.5 8.4 9.4 14.2 12.4 4.3 2.2 8.3 5 13.3 5.2h2.6c5-.2 9-2.9 13.3-5.2 5.8-3 13.2-4.8 14.2-12.4.9-5.8-6.9-17.8-6.1-28.9zm-22.8 3.7c-2.5 0-5.1-.1-7.2-.5.7-2.1 4-1.6 7.1-1.6h.2c3 0 6.4-.5 7.1 1.6-2.1.5-4.6.6-7.2.5z"/></symbol><symbol id="beard-3" viewBox="0 0 62.4 78.5"><path d="M62.4 42c0-5.2-2.4-7.8-3.6-10-.9-1.6-4-10.8-4.2-17.6C54.5 9.5 52.9 2 51.7 0c-.9 0-1.5 7.8-2.3 11.6-1.4 7-3.8 8.9-4.4 9-.8-2.8-4.1-7.4-13.7-7.7h-.1-.1c-9.6.4-12.9 4.9-13.7 7.7-.7-.1-3-2-4.4-9C12.2 7.8 11.5 0 10.7 0 9.5 2 7.9 9.5 7.8 14.4c-.2 6.9-3.3 16-4.2 17.6C2.4 34.2 0 36.8 0 42c0 3.7 5.2 7.2 5.6 11.4.1 1.2 0 2.3.1 3.4 2 17.5 17.9 21.7 25.4 21.7 7.6 0 23.4-4.2 25.4-21.7.2-1 0-2.1.1-3.4.6-4.2 5.8-7.7 5.8-11.4zM33.2 26.8c-.7-.1-3.4-.1-4.1 0-1.7.3-5.8 1-5.8-1.1 0-1.1 6.7-2.3 7.8-2.3 1.1 0 7.8 1.2 7.8 2.3.1 2-3.9 1.4-5.7 1.1z"/></symbol><symbol id="beard-4" viewBox="0 0 57 97.7"><path d="M51.1 15.2c-.4-5.4-.6-10.8-2.5-15.2-.8 0-1.5 7.3-2.3 10.9-1.5 7.1-3.7 8.3-4.4 8.3-.9-3.9-4.4-4.2-7.8-5.9-1.2-.6-2.3-1.1-3.6-1.2-.7-.1-1.3.1-2 .1s-1.3-.2-2-.1c-1.3.1-2.4.6-3.6 1.2-3.4 1.6-6.9 2-7.8 5.9-.7 0-3-1.1-4.4-8.3C9.9 7.3 9.2 0 8.4 0 6.5 4.4 6.3 9.8 5.9 15.2 5 38.8 0 51.5 0 62.4c0 26.1 11.7 35.3 28.5 35.3S57 88.5 57 62.4c0-10.9-5-23.6-5.9-47.2zM34.4 25c-2.8 1.2-5.4-.7-5.9-.7h-.1-.1c-.5 0-3.1 1.9-5.9.7-.8-3.6 2.4-4 5.9-3.9 3.7-.2 6.9.3 6.1 3.9z"/></symbol><symbol id="beard-5" viewBox="0 0 44.7 104.8"><path d="M43.4 0h-.1c-2.8 21.5-5.4 22.6-7 22.7-1.4.1-3.6-1.8-4.9-2.5-1.5-.9-4.1-2.5-9.1-2.5s-7.6 1.7-9.1 2.5c-1.3.7-3.5 2.6-4.9 2.5-1.6-.1-4.1-1.2-7-22.7h-.1C-.9 12.2-.4 50.2 2.4 63.6 5 82.1 12.5 98.7 15.8 103.2c.7 1 3.5 1.6 6.4 1.6 2.9 0 5.7-.5 6.4-1.6 3.3-4.5 10.8-21.1 13.4-39.6 2.9-13.4 3.5-51.4 1.4-63.6zM22.3 28.2c-3.4 0-6.7.2-10.1.5 1.1-1.8 9-3.2 10.1-3.4 1.1.2 9 1.7 10.1 3.4-3.4-.4-6.7-.5-10.1-.5z"/></symbol><symbol id="clock" viewBox="0 0 141.7 139.5"><path d="M71.8 21.5V1c0-.6-.4-1-1-1s-1 .4-1 1v20.5h1c.4-.1.7 0 1 0zM45.8 28.4c.6-.3 1.1-.7 1.7-1L37.3 9.7c-.3-.5-.9-.6-1.4-.4-.5.3-.6.9-.4 1.4l10.3 17.7zM10.5 34.7c-.3.5-.1 1.1.4 1.4l17.7 10.3c.3-.6.7-1.2 1-1.7L11.9 34.4c-.5-.3-1.1-.2-1.4.3zM106.4 8.5c-.5-.3-1.1-.1-1.4.4L94.2 27.5c.6.3 1.2.7 1.7 1l10.8-18.6c.4-.5.2-1.1-.3-1.4zM131.8 35.7c.5-.3.6-.9.4-1.4-.3-.5-.9-.6-1.4-.4l-18.6 10.8c.3.6.7 1.1 1 1.7l18.6-10.7zM22.5 69.8v-1H1c-.6 0-1 .4-1 1s.4 1 1 1h21.5v-1zM140.7 68.8h-21.5v2h21.5c.6 0 1-.4 1-1s-.5-1-1-1zM130.8 103.4l-17.7-10.3c-.3.6-.7 1.2-1 1.7l17.7 10.3c.2.1.3.1.5.1.3 0 .7-.2.9-.5.2-.4.1-1-.4-1.3zM9.9 103.9c-.5.3-.6.9-.4 1.4.2.3.5.5.9.5.2 0 .3 0 .5-.1l18.6-10.8c-.3-.6-.7-1.1-1-1.7L9.9 103.9zM95.9 111.1c-.6.3-1.1.7-1.7 1l10.2 17.7c.2.3.5.5.9.5.2 0 .3 0 .5-.1.5-.3.6-.9.4-1.4l-10.3-17.7zM34.9 129.7c-.3.5-.1 1.1.4 1.4.2.1.3.1.5.1.3 0 .7-.2.9-.5l10.8-18.6c-.6-.3-1.2-.7-1.7-1l-10.9 18.6zM69.8 118.1v20.5c0 .6.4 1 1 1s1-.4 1-1v-20.5h-2zM104.7 51.9c.7-.4 1-1.3.5-2-.4-.7-1.3-1-2-.5L74.8 65.7c-1-1-2.4-1.6-4-1.6-1.5 0-2.9.6-4 1.6L46.5 53.9c-.7-.4-1.6-.2-2.1.5-.4.7-.2 1.6.5 2.1l20.3 11.8c-.1.5-.2.9-.2 1.4 0 3.1 2.5 5.7 5.7 5.7 3.1 0 5.7-2.5 5.7-5.7 0-.5-.1-1-.2-1.4l28.5-16.4zM75.3 66.3zm.4.6zm-9.7 0c-.1 0-.1 0 0 0-.1 0-.1 0 0 0zm.4-.6s-.1 0 0 0c-.1 0 0 0 0 0zm4.4 6.1c-1.5 0-2.7-1.2-2.7-2.7s1.2-2.7 2.7-2.7c1.5 0 2.7 1.2 2.7 2.7s-1.2 2.7-2.7 2.7z"/></symbol><symbol id="icon-beard" viewBox="0 0 22.1 21.2"><path fill="#010101" d="M21.8 0h-.1c-1 3.3-1.3 7.3-4 8.8-.5-1.4-1.8-2.1-3.2-2.7-.9-.4-1.9-1.1-2.8-1.1-.2 0-.4 0-.6.1-.3-.1-.5-.1-.7-.1-.9 0-1.9.7-2.8 1.1-1.5.7-2.7 1.3-3.2 2.7-2.8-1.5-3-5.6-4-8.8H.3C.1.3.1.7 0 1c0 .8.2 9.2.8 12.2.5 2.7 2.6 4.6 4.6 5.9 1.4.9 3.6 2.1 5.6 2.1 1.9 0 4.2-1.2 5.6-2.1 2-1.3 4.1-3.2 4.6-5.9.6-3 .8-11.4.8-12.2 0-.3-.1-.7-.2-1zm-6 12c-.1.7-.7 1.5-1.4 1.5-1.3.1-1.9-1.9-3.4-1.9-1.4 0-2.1 1.9-3.4 1.9-.7 0-1.3-.8-1.4-1.5-.1-.8.3-2 .7-2.4.5-.5 1.2-.4 2-.5.9-.1 1.7-.4 2.1-.8.5.5 1.2.7 2.1.8.8.1 1.5.1 2 .5.5.5.9 1.6.7 2.4z"/></symbol><symbol id="icon-mustache" viewBox="0 0 45 12.9"><path fill="#010101" d="M22.5 8.2c1.2 1.7 3.6 4.4 8.8 4.7 7.1.3 13.7-5.2 13.7-7.3-2.8 2.5-7.4 2.7-9.9 1.7C31.3 5.8 32 2.8 29.2.9c-1.6-1.1-3.8-1.2-5.7 0-.3.2-.7.5-1 .8-.3-.3-.7-.6-1-.8-1.9-1.2-4.1-1.1-5.7 0-2.8 2-2.1 4.9-5.9 6.4-2.5 1-7.1.8-9.9-1.7 0 2.1 6.5 7.6 13.7 7.3 5.2-.2 7.6-3 8.8-4.7z"/></symbol><symbol id="icon-scissors" viewBox="0 0 23 20"><path d="M8.5 4c0-2.2-1.8-4-4-4s-4 1.8-4 4 1.8 4 4 4c.6 0 1.1-.1 1.6-.4L8.5 10l-2.4 2.4c-.5-.3-1-.4-1.6-.4-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4c0-.6-.1-1.1-.4-1.6l2.4-2.4 7 7h4L8.1 5.6c.3-.5.4-1 .4-1.6zm-4 2c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0 12c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6-8.5c.3 0 .5.2.5.5s-.2.5-.5.5-.5-.2-.5-.5.2-.5.5-.5zm11-8.5h-4l-6 6 2 2 8-8z"/></symbol></svg><!-- endinject -->
+  </div>
   
-  <main class="page__section main-content">
-    
-    <section class="page__section page__section--theme--default">
-      <div class="page__content main-content__promo promo">
-        <h2 class="page__section-heading visually-hidden">Наши предложения:</h2>
-        <ul class="promo__items">       
-          <li class="promo__item">
-            <div class="promo-card promo-card--color--orange promo-card new">
-              <p class="promo-card__caption">Материалы</p>
-              <a href="#" class="promo-card__link button">На любой вкус</a>
-              <div class="promo-card__icon-wrapper">
-                <img src="img/icon-1.svg" alt="" class="promo-card__icon">
-              </div>      
-            </div>
+  <header class="page__header">
+  <nav class="main-nav">
+    <a class="main-nav__logo logo">
+      <svg class="logo__image" width="370" height="153" viewBox="0 0 370 153">
+        <g class="logo__barbershop">
+          <path fill="#FFFFFF" d="M119.858,11.427C127.044,8.998,127.591,0,120.509,0c-1.949,0-4.276,1.369-5.884,4.174l-9.579,16.559
+          c-0.445,0.787-0.891,1.437-1.369,2.019c-2.464-3.387-1.744-8.451,1.71-10.674l-1.437-1.813c-7.458,4.755-5.269,18.475,7.185,18.475
+          C121.775,28.739,126.701,15.977,119.858,11.427z M111.066,26.002c-2.121,0-3.799-0.479-5.131-1.232
+          c0.614-0.718,1.231-1.607,1.778-2.532l5.986-10.367l0.958,0.103C123.006,13.72,119.688,26.002,111.066,26.002z M114.898,9.785
+          l2.873-4.927c2.601-4.482,5.919-1.847,4.14,1.505C120.543,8.93,118.524,9.716,114.898,9.785z"/>
+          <path fill="#FFFFFF" d="M259.209,18.954l-0.238,0.274c-1.985,2.326-4.346,4.243-6.502,4.995c0.582-0.924,1.027-1.916,1.472-2.669
+          l3.935-6.739c3.319-5.645-2.053-7.527-5.68-4.276l0.719-1.233h-3.559l-5.563,9.655c-0.005-0.002-0.009-0.004-0.012-0.006
+          l-0.24,0.274c-1.608,1.745-3.593,2.6-5.371,2.634l3.353-5.781c2.155-3.729,0.172-7.253-3.182-7.253
+          c-2.737,0-4.857,1.095-6.911,4.654l-1.745,3.044l-1.452,2.486l-0.19,0.217c-2.566,2.977-5.063,5.337-6.638,5.337
+          c-0.787,0-1.23-0.547-0.411-1.95l5.133-8.998c1.539-2.703,0.069-4.653-1.916-4.653c-1.539,0-3.183,0.855-4.961,2.704l5.679-9.888
+          h-3.557l-9.924,17.215l-0.204,0.233c-1.299,1.54-2.874,2.908-4.277,3.866c1.131-3.387,0.892-8.587,3.08-13.137l-2.669-1.438
+          c-1.471,2.02-4.686,6.672-7.903,10.435c0,0,0,0,0,0s0,0,0,0l-0.239,0.274c-2.565,2.977-5.064,5.337-6.637,5.337
+          c-0.787,0-1.232-0.547-0.411-1.95l3.559-6.227c1.231-2.155,0.649-3.421-0.514-4.824l-1.984-2.394
+          c-0.514-0.651-0.514-1.369,0.204-2.053l-1.847-2.019c-2.019,1.813-2.189,3.832-0.924,5.474l0.308,0.411
+          c-1.573,2.223-3.694,5.234-6.021,7.971l-0.238,0.274c-2.566,2.977-5.851,5.337-8.348,5.337c-2.19,0-3.49-1.368-1.848-4.242
+          l0.342-0.616c2.292,0.958,6.604,0.512,9.272-4.105l0.513-0.89c1.916-3.284,0.068-5.748-2.841-5.748
+          c-2.872,0-5.165,1.505-6.671,4.106l-3.447,5.915l-0.214,0.244c-1.607,1.779-3.626,2.6-5.371,2.634l3.354-5.781
+          c0.89-1.574,1.333-2.942,1.333-4.071c0-1.813-1.23-3.182-3.216-3.182c-0.854,0-1.608,0.308-2.327,0.787l4.518-7.835h-3.627
+          l-9.975,17.234l-0.187,0.214c-2.566,2.977-5.063,5.337-6.638,5.337c-0.786,0-1.231-0.547-0.41-1.95l3.558-6.227
+          c1.231-2.155,0.649-3.421-0.513-4.824l-1.984-2.394c-0.514-0.651-0.514-1.369,0.205-2.053l-1.847-2.019
+          c-2.02,1.813-2.19,3.832-0.925,5.474l0.309,0.411c-1.574,2.223-3.695,5.234-6.021,7.971l-0.239,0.274
+          c-2.566,2.977-5.063,5.337-6.637,5.337c-0.788,0-1.233-0.547-0.412-1.95l5.749-10.058h-2.02c0.137-1.506-1.402-3.593-3.729-3.593
+          c-1.916,0-4.583,1.505-6.09,4.106l-4.994,8.621c-1.507,2.635-0.444,5.064,2.429,5.064c1.437,0,3.216-0.924,4.927-2.327
+          c0.171,1.369,1.266,2.327,3.08,2.327c2.94,0,6.328-3.147,9.271-6.569l0,0c1.711-1.984,3.045-3.763,5.885-7.629l0.479,0.582
+          c0.444,0.582,0.615,1.3,0.205,2.018l-3.764,6.535c-1.504,2.635-0.443,5.064,2.429,5.064c2.063,0,4.344-1.549,6.537-3.652
+          c0,0.008-0.001,0.017-0.001,0.025c0,2.429,1.814,3.797,4.106,3.797c1.982,0,4.276-1.026,6.056-3.318
+          c0.271,0.034,0.512,0.034,0.786,0.034c1.321,0,3.118-0.504,4.725-1.404c-0.187,2.568,1.676,4.518,4.821,4.518
+          c4.037,0,8.039-3.147,10.981-6.569c1.712-1.984,3.045-3.763,5.885-7.629l0.479,0.582c0.444,0.582,0.615,1.3,0.205,2.018
+          l-3.764,6.535c-1.506,2.635-0.444,5.064,2.429,5.064c2.943,0,6.33-3.147,9.272-6.569l-0.001,0l0.001,0
+          c2.018-2.326,3.798-4.824,5.063-6.5c-1.402,3.696-0.65,10.333-4.036,10.333c-1.197,0-1.678-1.3-1.678-1.3l-2.224,1.164
+          c0,0,0.65,2.874,3.901,2.874c0.341,0,0.648-0.034,0.99-0.068c0.036,0,0.069-0.034,0.104-0.034c1.872-0.248,3.735-1.136,5.466-2.364
+          l-1.223,2.124h3.592l5.405-9.408c5.475-6.876,7.903-5.987,6.363-3.353l-4.618,8.04c-1.506,2.635-0.445,5.064,2.429,5.064
+          c2.067,0,4.354-1.556,6.551-3.667c-0.008,4.537,6.294,5.422,10.146,0.553h0.788c1.073,0,2.464-0.334,3.81-0.944l-6.479,11.242
+          h3.593l10.64-18.509c3.968-5.406,6.467-3.421,5.543-1.813l-5.37,9.306c-0.583,1.027-1.918,1.334-2.567,0l-2.019,0.958
+          c0,0,0.65,2.874,3.9,2.874h0.206c5.166-0.103,8.552-3.182,11.461-6.569C260.339,19.638,259.723,19.09,259.209,18.954z
+          M178.193,13.959c2.053-3.524,5.678-2.942,3.558,0.752l-0.513,0.89c-1.711,2.908-4.004,2.84-5.337,2.361L178.193,13.959z
+          M132.588,19.57c-2.156,3.386-4.278,4.995-5.749,4.995c-0.787,0-1.231-0.547-0.411-1.95l4.963-8.655
+          c1.915-3.319,5.712-2.463,3.968,0.752L132.588,19.57z M159.376,24.428c-0.788,0-1.438-0.479-1.438-1.369
+          c0-0.513,0.206-1.094,0.617-1.847l1.266-2.189c0.274,1.539,0.958,2.874,2.258,3.694C161.36,23.88,160.266,24.428,159.376,24.428z
+          M163.104,20.972c-0.923-0.684-1.506-1.778-1.506-3.216c0-2.532,2.465-6.671,4.482-6.671c0.787,0,1.335,0.582,1.335,1.54
+          c0,0.581-0.205,1.3-0.685,2.121L163.104,20.972z M236.184,19.194h-0.17c-1.163,0-2.088,0.958-2.088,2.121
+          c0,0.445,0.137,0.855,0.342,1.198l-0.034,0.068c-1.676,2.873-5.747,2.326-3.626-1.369l2.703-4.688l1.71-2.908
+          c2.497-4.242,5.919-2.566,3.764,1.129L236.184,19.194z"/>
+        </g>
+        <g>
+          <rect x="1.675" y="69.236" transform="matrix(-0.7072 0.707 -0.707 -0.7072 61.5704 121.0555)" fill="#FFFFFF" width="8.084" height="8.084"/>
+          <rect x="353.675" y="69.236" transform="matrix(-0.7072 0.707 -0.707 -0.7072 662.4932 -127.8249)" fill="#FFFFFF" width="8.084" height="8.084"/>
+          <g>
+            <polygon fill="#636466" points="46.799,73.48 48.882,73.48 48.882,65.156 52.157,65.156 52.157,63.072 46.799,63.072   "/>
+            <path fill="#636466" d="M61.691,75.009V62.324c0-1.795-1.067-3.325-2.563-4.069c0.298,0.602,0.48,1.27,0.48,1.986v12.686
+            c0,1.416-0.615,2.648-1.662,3.511c0.924,0.985,1.662,2.094,1.662,3.694v14.104c0,2.463-2.094,4.557-4.557,4.557h-13.56v2.084
+            h15.643c2.463,0,4.557-2.094,4.557-4.557V82.215c0-1.602-0.738-2.709-1.662-3.695C61.076,77.658,61.691,76.425,61.691,75.009z"/>
+            <polygon fill="#636466" points="46.799,91.34 48.882,91.34 48.882,82.955 52.157,82.955 52.157,80.871 46.799,80.871   "/>
+          </g>
+          <g>
+            <polygon fill="#636466" points="79.81,91.34 81.893,91.34 81.893,65.156 85.168,65.156 85.168,63.072 79.81,63.072   "/>
+            <path fill="#636466" d="M92.139,58.254c0.298,0.602,0.48,1.27,0.48,1.986v33.994c0,2.463-2.094,4.557-4.557,4.557H76.978
+            c-0.717,0-1.385-0.184-1.987-0.48c0.744,1.496,2.274,2.564,4.07,2.564h11.085c2.463,0,4.557-2.094,4.557-4.557V62.324
+            C94.702,60.529,93.635,58.999,92.139,58.254z"/>
+          </g>
+          <g>
+            <polygon fill="#636466" points="112.82,73.48 114.903,73.48 114.903,65.156 118.179,65.156 118.179,63.072 112.82,63.072   "/>
+            <path fill="#636466" d="M125.065,82.523c1.601-0.74,2.586-2.34,2.586-4.064V62.324c0-1.816-1.06-3.364-2.566-4.098
+            c0.299,0.609,0.483,1.286,0.483,2.014v16.135c0,1.725-0.985,3.325-2.586,4.064l3.079,18.352h-5.658l0.351,2.084h7.391
+            L125.065,82.523z"/>
+            <polygon fill="#636466" points="115.653,80.871 112.82,80.871 112.82,98.791 107.514,98.791 107.514,100.875 114.903,100.875
+            114.903,82.955 116.004,82.955   "/>
+          </g>
+          <g>
+            <polygon fill="#636466" points="144.848,91.34 146.931,91.34 146.931,65.156 150.206,65.156 150.206,63.072 144.848,63.072   "/>
+            <path fill="#636466" d="M157.177,58.254c0.298,0.602,0.48,1.27,0.48,1.986v33.994c0,2.463-2.094,4.557-4.557,4.557h-11.086
+            c-0.716,0-1.384-0.184-1.985-0.48c0.743,1.496,2.273,2.564,4.068,2.564h11.086c2.463,0,4.557-2.094,4.557-4.557V62.324
+            C159.74,60.529,158.673,58.999,157.177,58.254z"/>
+          </g>
+          <g>
+            <polygon fill="#636466" points="177.858,91.34 179.941,91.34 179.941,65.156 183.217,65.156 183.217,63.072 177.858,63.072   "/>
+            <path fill="#636466" d="M190.188,58.254c0.298,0.602,0.48,1.27,0.48,1.986v33.994c0,2.463-2.094,4.557-4.557,4.557h-13.56v2.084
+            h15.643c2.463,0,4.557-2.094,4.557-4.557V62.324C192.751,60.529,191.684,58.999,190.188,58.254z"/>
+          </g>
+          <polygon fill="#636466" points="211.239,57.766 211.239,98.791 205.933,98.791 205.933,100.875 213.322,100.875 213.322,57.766 "/>
+          <g>
+            <polygon fill="#636466" points="244.126,57.766 244.126,98.791 238.22,98.791 238.819,100.875 246.209,100.875 246.209,57.766   "/>
+            <polygon fill="#636466" points="231.316,79.947 231.316,98.791 226.01,98.791 226.01,100.875 233.399,100.875 233.399,87.189   "/>
+          </g>
+          <g>
+            <path fill="#636466" d="M263.578,82.955h6.107v-2.084h-8.19c-0.722,0-1.394-0.181-1.998-0.477
+            C260.236,81.908,261.774,82.955,263.578,82.955z"/>
+            <polygon fill="#636466" points="266.41,85.725 264.327,86.211 264.327,91.34 266.41,91.34   "/>
+            <path fill="#636466" d="M276.656,58.254c0.298,0.602,0.48,1.27,0.48,1.986v8.744l-5.368,1.243v2.565l7.451-1.725v-8.744
+            C279.22,60.529,278.152,58.999,276.656,58.254z"/>
+            <path fill="#636466" d="M276.656,76.052c0.298,0.602,0.48,1.269,0.48,1.985v16.197c0,2.463-2.094,4.557-4.557,4.557h-11.085
+            c-0.717,0-1.385-0.184-1.987-0.48c0.744,1.496,2.274,2.564,4.07,2.564h11.085c2.463,0,4.557-2.094,4.557-4.557V80.121
+            C279.22,78.326,278.153,76.796,276.656,76.052z"/>
+            <polygon fill="#636466" points="264.327,63.072 264.327,73.48 266.41,73.48 266.41,65.156 269.686,65.156 269.686,63.072   "/>
+          </g>
+          <g>
+            <polygon fill="#636466" points="298.017,80.871 297.339,80.871 297.339,98.791 292.032,98.791 292.032,100.875 299.422,100.875
+            299.422,85.352   "/>
+            <polygon fill="#636466" points="313.155,57.766 310.403,57.766 304.175,77.176 311.072,98.791 305.066,98.791 305.643,100.629
+            305.704,100.875 313.155,100.875 306.258,79.26   "/>
+          </g>
+          <polygon fill="#636466" points="330.535,57.766 330.535,98.791 325.229,98.791 325.229,100.875 332.618,100.875 332.618,57.766 "/>
+          <rect x="361.533" y="79.663" transform="matrix(0.707 -0.7072 0.7072 0.707 49.7194 282.2921)" fill="#636466" width="8.084" height="2.947"/>
+          <rect x="9.533" y="79.663" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -53.3961 33.3639)" fill="#636466" width="8.085" height="2.947"/>
+          <g>
+            <path fill="#FFFFFF" d="M55.649,68.967c0,1.416-0.615,2.648-1.662,3.511c0.924,0.985,1.662,2.094,1.662,3.694v14.103
+            c0,2.463-2.094,4.557-4.557,4.557H35.45V51.724h15.643c2.463,0,4.557,2.032,4.557,4.558V68.967z M48.198,59.114H42.84v10.408h5.358
+            V59.114z M48.198,76.912H42.84v10.469h5.358V76.912z"/>
+            <path fill="#FFFFFF" d="M84.104,51.724c2.463,0,4.557,2.032,4.557,4.558v33.994c0,2.463-2.094,4.557-4.557,4.557H73.019
+            c-2.525,0-4.558-2.094-4.558-4.557V56.282c0-2.525,2.032-4.558,4.558-4.558H84.104z M81.209,59.114h-5.358v28.267h5.358V59.114z"/>
+            <path fill="#FFFFFF" d="M114.712,94.832l-3.018-17.92h-2.833v17.92h-7.39V51.724h15.643c2.463,0,4.495,2.032,4.495,4.558v16.135
+            c0,1.725-0.985,3.325-2.586,4.064l3.079,18.351H114.712z M114.22,59.114h-5.358v10.408h5.358V59.114z"/>
+            <path fill="#FFFFFF" d="M149.142,51.724c2.463,0,4.557,2.032,4.557,4.558v33.994c0,2.463-2.094,4.557-4.557,4.557h-11.086
+            c-2.524,0-4.557-2.094-4.557-4.557V56.282c0-2.525,2.032-4.558,4.557-4.558H149.142z M146.247,59.114h-5.358v28.267h5.358V59.114z"
+            />
+            <path fill="#FFFFFF" d="M182.152,51.724c2.463,0,4.557,2.032,4.557,4.558v33.994c0,2.463-2.094,4.557-4.557,4.557H166.51V51.724
+            H182.152z M179.258,59.114h-5.358v28.267h5.358V59.114z"/>
+            <path fill="#FFFFFF" d="M199.891,51.724h7.39v43.108h-7.39V51.724z"/>
+            <path fill="#FFFFFF" d="M240.167,51.724v43.108h-7.39l-5.42-18.843v18.843h-7.39V51.724h7.328l5.42,17.675V51.724H240.167z"/>
+            <path fill="#FFFFFF" d="M268.621,69.522c2.463,0,4.557,2.032,4.557,4.557v16.197c0,2.463-2.094,4.557-4.557,4.557h-11.085
+            c-2.525,0-4.558-2.094-4.558-4.557v-8.867l7.39-1.725v7.697h5.358V76.912h-8.19c-2.525,0-4.558-2.033-4.558-4.558V56.282
+            c0-2.525,2.032-4.558,4.558-4.558h11.085c2.463,0,4.557,2.032,4.557,4.558v8.744l-7.451,1.725v-7.637h-5.358v10.408H268.621z"/>
+            <path fill="#FFFFFF" d="M300.216,73.217l6.897,21.615h-7.451l-0.062-0.246l-5.543-17.674h-0.678v17.92h-7.39V51.724h7.39v17.798
+            h0.555l5.666-17.798h7.513L300.216,73.217z"/>
+            <path fill="#FFFFFF" d="M319.187,51.724h7.39v43.108h-7.39V51.724z"/>
+          </g>
+        </g>
+        <g class="logo__mustache">
+          <g>
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M167.898,123.846c0.469,0,0.939,0,1.409,0
+            c5.429,0.278,9.686,1.728,12.393,4.724c2.738-2.987,6.994-4.458,12.455-4.724c0.45,0,0.899,0,1.35,0
+            c12.106,0.823,17.629,9.496,27.301,13.19c1.418,0.541,3.219,1.151,4.786,0.982c2.475-0.27,4.059-2.78,3.741-5.583
+            c-0.342-3.016-3.276-5.609-6.564-4.173c-0.483,0.211-0.841,0.509-1.165,0.798c-0.254,0.226-0.534,0.826-1.166,0.613
+            c-0.598-0.496,0.044-1.227,0.307-1.655c1.134-1.855,2.909-3.233,6.074-3.007c5.631,0.404,10.675,5.337,9.815,12.822
+            c-1.919,11.209-12.109,14.149-24.172,15.215c-1.309,0-2.618,0-3.927,0c-12.528-0.744-21.43-5.114-28.773-11.043
+            c-7.464,5.849-16.291,10.334-28.896,11.043c-1.288,0-2.577,0-3.865,0c-12.159-1.072-22.445-4.017-24.233-15.461
+            c-0.675-8.159,4.185-12.172,9.816-12.576c3.128-0.225,5.022,1.146,6.135,3.007c0.278,0.464,0.803,1.166,0.307,1.717
+            c-0.609,0.109-0.908-0.369-1.165-0.613c-0.699-0.664-1.494-1.18-2.822-1.228c-3.862-0.139-6.076,4.154-4.54,7.608
+            c0.525,1.181,1.798,2.363,3.374,2.516c1.568,0.15,3.361-0.459,4.786-0.982c1.481-0.545,2.745-1.245,3.865-1.901
+            C151.892,130.813,157.636,124.762,167.898,123.846z"/>
+          </g>
+        </g>
+      </svg>
+    </a>
+    <!-- main-nav__menu--closed -->
+    <div class="main-nav__menu">
+      <div class="main-nav__wrapper">
+        <button class="main-nav__hamburger">Открыть или закрыть меню</button>
+        <ul class="main-nav__links">
+          <li class="main-nav__item main-nav__item--active">
+            <a href="#" class="main-nav__link">Главная</a>
           </li>
-          <li class="promo__item">
-            <div class="promo-card promo-card--color--blue">
-              <p class="promo-card__caption">Инструмент</p>
-              <a href="#" class="promo-card__link button">На все случаи</a>          
-              <div class="promo-card__icon-wrapper">
-                <img src="img/icon-2.svg" alt="" class="promo-card__icon">
-              </div>
-            </div>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Наши работы</a>
           </li>
-          
-          <li class="promo__item">          
-            <div class="promo-slideshow">
-              <!-- hidden -->
-              <ul class="promo-slideshow__slides">
-                <li class="promo-slideshow__slide">                  
-                  <div class="promo-slideshow__caption">
-                    <p class="promo-slideshow__main-caption">Дрели</p>
-                    <p class="promo-slideshow__description">Соседям на радость!</p>
-                  </div>
-                  <img class="promo-slideshow__img" src="img/slider-1.jpg" alt="Фоновое изображение слайдера">
-                </li>
-                <li class="promo-slideshow__slide">                
-                  <div class="promo-slideshow__caption">
-                    <p class="promo-slideshow__main-caption">Перфораторы</p>
-                    <p class="promo-slideshow__description">Настоящие мужские игрушки</p>
-                  </div>
-                  <img src="img/slider-2.jpg" alt="Фоновое изображение слайдера" class="promo-slideshow__img">
-                </li>
-              </ul>
-              <a href="catalog.html" class="promo-slideshow__link button">Открыть каталог</a>
-              <!-- #TODO: Make this elements in js, add dots -->
-              <button class="promo-slideshow__nav-button promo-slideshow__nav-button--prev" onclick="plusSlides(-1)">Предыдущий слайд</button>
-              <button class="promo-slideshow__nav-button promo-slideshow__nav-button--next" onclick="plusSlides(1)">Следующий слайд</button>
-              <ul class="promo-slideshow__dots">
-                <li class="promo-slideshow__dot-item">
-                  <button class="promo-slideshow__dot promo-slideshow__dot--active" onclick="currentSlide(1)"></button>
-                </li>
-                <li class="promo-slideshow__dot-item">
-                  <button class="promo-slideshow__dot" onclick="currentSlide(2)"></button>
-                </li>
-              </ul>
-            </div>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Записаться</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Контакты</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Avalsoff</a>
           </li>
         </ul>
-        <ul class="promo__items promo__items--aside">
-          <li class="promo__item">
-            <div class="promo-card promo-card--color--pink">
-              <p class="promo-card__caption">Техника</p>
-              <a href="#" class="promo-card__link button">Для стройки</a>          
-              <div class="promo-card__icon-wrapper">
-                <img src="img/icon-3.svg" alt="" class="promo-card__icon">
-              </div>
-            </div>
-          </li>
-          <li class="promo__item">
-            <div class="promo-card promo-card--color--green">
-              <p class="promo-card__caption">Скидки 50%</p>
-              <a href="#" class="promo-card__link button">На 350 товаров</a>          
-              <div class="promo-card__icon-wrapper">
-                <img src="img/icon-4.svg" alt="" class="promo-card__icon">
-              </div>
-            </div>
-          </li>
-          <li class="promo__item">
-            <div class="promo-card promo-card--color--orange">
-              <p class="promo-card__caption">Доставка</p>
-              <a href="#" class="promo-card__link button">Бесплатно</a>          
-              <div class="promo-card__icon-wrapper">
-                <img src="img/icon-5.svg" alt="" class="promo-card__icon">
-              </div>
-            </div>
-          </li>            
-        </ul>
-      </div>
-    </section>
-    
-    
-    <section class="page__section page__section--theme--default"> 
-      <div class="page__content main-content__popular-goods goods">
-        <div class="heading-panel goods__heading-panel">
-          <h2 class="page__section-heading heading-panel__heading">Популярные товары</h2>
-          <a class="button heading-panel__button" href="#">Все популярные товары</a>
-        </div>      
-        <ul class="goods__products products ">        
-          <li class="products__item">
-            <div class="product-card">
-              <div class="product-card__image-wrapper">
-                <img src="img/product-1.jpg" alt="Перфоратор BOSCH" class="product-card__image">
-              </div>
-              <div class="product-card__buttons">
-                <a href="#" class="button product-card__button product-card__button--buy">Купить</a>
-                <button class="button product-card__button product-card__button--bookmark">В закладки</button>
-              </div>
-              <p class="product-card__name">Перфоратор BOSCH BFG 3000</p>
-              <div class="product-card__price-wrapper">
-                <p class="product-card__price product-card__price--old">
-                  32500 Р.
-                </p>
-                <p class="product-card__price product-card__price--new">
-                  25500 Р.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="products__item">
-            <div class="product-card">
-              <div class="product-card__image-wrapper">
-                <img src="img/product-2.jpg" alt="Перфоратор BOSCH" class="product-card__image">
-              </div>
-              <div class="product-card__buttons">
-                <a href="#" class="button product-card__button product-card__button--buy">Купить</a>
-                <button class="button product-card__button product-card__button--bookmark">В закладки</button>
-              </div>
-              <p class="product-card__name">Перфоратор BOSCH BFG 3000</p>
-              <div class="product-card__price-wrapper">
-                <p class="product-card__price--old">
-                  32500 Р.
-                </p>
-                <p class="product-card__price--new">
-                  25500 Р.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="products__item">
-            <div class="product-card">
-              <div class="product-card__image-wrapper">
-                <img src="img/product-3.jpg" alt="Перфоратор BOSCH" class="product-card__image">
-              </div>
-              <div class="product-card__buttons">
-                <a href="#" class="button product-card__button product-card__button--buy">Купить</a>
-                <button class="button product-card__button product-card__button--bookmark">В закладки</button>
-              </div>
-              <p class="product-card__name">Перфоратор BOSCH BFG 3000</p>
-              <div class="product-card__price-wrapper">
-                <p class="product-card__price--old">
-                  32500 Р.
-                </p>
-                <p class="product-card__price--new">
-                  25500 Р.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="products__item">
-            <div class="product-card product-card new">
-              <div class="product-card__image-wrapper">
-                <img src="img/product-4.jpg" alt="Перфоратор BOSCH" class="product-card__image">
-              </div>
-              <div class="product-card__buttons">
-                <a href="#" class="button product-card__button product-card__button--buy">Купить</a>
-                <button class="button product-card__button product-card__button--bookmark">В закладки</button>
-              </div>
-              <p class="product-card__name">Перфоратор BOSCH BFG 3000</p>
-              <div class="product-card__price-wrapper">
-                <p class="product-card__price--old">
-                  32500 Р.
-                </p>
-                <p class="product-card__price--new">
-                  25500 Р.
-                </p>
-              </div>
-            </div>
-          </li>        
-        </ul>
-      </div>
-    </section>
-    
-    
-    <section class="page__section page__section--theme--default">
-      <div class="page__content main-content__popular-manufacturers manufacturers">
-        <div class="heading-panel manufacturers__heading-panel">
-          <h2 class="page__section-heading heading-panel__heading">Популярные производители</h2>
-          <a class="button heading-panel__button" href="#">Все производители</a>
-        </div>
-        
-        <ul class="manufacturers__logos logos">
-          <li class="logos__item">
-            <a href="#" class="logo-card">
-              <div class="logo-card__image-wrapper">
-                <img class="logo-card__image" src="img/logo-bosch.jpg" alt="Логотип компании BOSCH">
-              </div>
-            </a>
-          </li>
-          <li class="logos__item">
-            <a href="#" class="logo-card">
-              <div class="logo-card__image-wrapper">
-                <img class="logo-card__image" src="img/logo-Makita.jpg" alt="Логотип компании BOSCH">
-              </div>
-            </a>
-          </li>
-          <li class="logos__item">
-            <a href="#" class="logo-card">
-              <div class="logo-card__image-wrapper">
-                <img class="logo-card__image" src="img/logo-DeWALT.jpg" alt="Логотип компании BOSCH">
-              </div>
-            </a>
-          </li>
-          <li class="logos__item">
-            <a href="#" class="logo-card">
-              <div class="logo-card__image-wrapper">
-                <img class="logo-card__image" src="img/logo-interskol.jpg" alt="Логотип компании BOSCH">
-              </div>
-            </a>
-          </li>
-          <li class="logos__item">
-            <a href="#" class="logo-card">
-              <div class="logo-card__image-wrapper">
-                <img class="logo-card__image" src="img/logo-Hitachi.jpg" alt="Логотип компании BOSCH">
-              </div>
-            </a>
-          </li>
-          <li class="logos__item">
-            <a href="#" class="logo-card">
-              <div class="logo-card__image-wrapper">
-                <img class="logo-card__image" src="img/logo-LG.jpg" alt="Логотип компании BOSCH">
-              </div>
-            </a>
-          </li>
-          <li class="logos__item">
-            <a href="#" class="logo-card">
-              <div class="logo-card__image-wrapper">
-                <img class="logo-card__image" src="img/logo-AEG.jpg" alt="Логотип компании BOSCH">
-              </div>
-            </a>
-          </li>
-          <li class="logos__item">
-            <a href="#" class="logo-card">
-              <div class="logo-card__image-wrapper">
-                <img class="logo-card__image" src="img/logo-Metabo.jpg" alt="Логотип компании BOSCH">
-              </div>
+        <ul class="main-nav__login">
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link main-nav__link--login">
+              Вход
             </a>
           </li>
         </ul>
       </div>
-    </section>
-    
-    
-    <section class="page__section page__section--theme--light">
-      <div class="page__content main-content__services services">
-        <h2 class="section-heading">Сервисы</h2>
-        <p class="services__description">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        
-        <div class="services__tabs vertical-tabs">
-          <ul class="vertical-tabs__buttons">
-            <li class="vertical-tabs__item">
-              <button class="vertical-tabs__button vertical-tabs__button--active" id="defaultOpen" onclick="openTab(event, 'delivery')">Доставка</button>
-            </li>
-            <li class="vertical-tabs__item">
-              <button class="vertical-tabs__button" onclick="openTab(event, 'guarantee')">Гарантия</button>
-            </li>
-            <li class="vertical-tabs__item">
-              <button class="vertical-tabs__button" onclick="openTab(event, 'credit')">Кредит</button>
-            </li>
-          </ul>
-          <ul class="vertical-tabs__contents">
-            <li class="vertical-tabs__content vertical-tabs__content--delivery">
-              <h3 class="vertical-tabs__content-heading">Доставка</h3>
-              <p class="vertical-tabs__content-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-            </li>
-            <li class="vertical-tabs__content vertical-tabs__content--guarantee js-hide">
-              <h3 class="vertical-tabs__content-heading">Гарантия</h3>
-              <p class="vertical-tabs__content-description">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-            </li>
-            <li class="vertical-tabs__content vertical-tabs__content--credit js-hide">
-              <h3 class="vertical-tabs__content-heading">Кредит</h3>
-              <p class="vertical-tabs__content-description">Залезть в долговую яму стало проще! <br>
-                Кредитные консультанты придут вам на помощь.
-              </p>
-              <a href="#" class="vertical-tabs__content-button button">Отправить заявку</a>
-              
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    
-    
-    <section class="page__section page__section--theme--default">
-      <div class="page__content page__content--flex">
-        <section class="main-content__about-us about-us">      
-          <h2 class="section-heading">Компания «Техномарт»</h2>
-          <p class="about-us__description">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p class="about-us__description">
-            Мы можем доставить ваш товар в самые отдаленные точки России! <br>
-            Техномарт работает со многими транспортными компаниями:                 
+    </div>
+  </nav>
+</header>
+  
+  <main class="page__main">
+    <h1 class="visually-hidden">Барбершоп Бородинский</h1>
+    <section class="feautures">
+      <div class="feautures__large-wrapper">
+        <h2 class="visually-hidden">Барбершоп в цифрах</h2>
+        <header class="feautures__header page__inner">
+          <b class="feautures__slogan">
+            Стрижка у нас <br>
+            это выгодно!
+          </b>
+          <p class="feautures__description">
+            Мужская стрижка требует точного подхода. Обратимся к&nbsp;статистике:
           </p>
-          <ul class="about-us__companies">
-            <li class="about-us__companie">Деловые линии</li>
-            <li class="about-us__companie">Автотрейднг</li>
-            <li class="about-us__companie">ЖелДорЭкспедиция</li>
+          <small class="feautures__footnote">
+            * — приведенные данные ложь
+          </small>
+        </header>
+        <div class="feautures__wrapper">
+          <table class="feautures__items page__inner">
+            <!-- don't forget about tbody -->
+            <tr class="feautures__item">
+              <td class="feautures__value">1 500<sup></sup></td>
+              <td class="feautures__key"><span>рублей</span> вложений</td>
+            </tr>
+            <tr class="feautures__item">
+              <td class="feautures__value">7 200</td>
+              <td class="feautures__key"><span>секунд</span> времени мастера</td>
+            </tr>
+            <tr class="feautures__item">
+              <td class="feautures__value">90 000</td>
+              <td class="feautures__key"><span>постриженных</span> волос</td>
+            </tr>
+            <tr class="feautures__item">
+              <td class="feautures__value">500 000<sup></sup></td>
+              <td class="feautures__key"><span>лайков и</span> комплементов</td>
+            </tr>
+          </table>        
+          <small class="feautures__footnote feautures__footnote--mobile">
+            * — приведенные данные ложь
+          </small>
+        </div>
+      </div>
+    </section>
+    
+    <section class="advantages">      
+      <h2 class="visually-hidden">Наши приемущества</h2>
+      <ul class="advantages__items">
+        <li class="advantages__item advantages__item--fast carousel-cell">
+          <h3 class="advantages__caption">Быстро</h3>
+          <p class="advantages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
+        </li>
+        <li class="advantages__item advantages__item--cool carousel-cell">
+          <h3 class="advantages__caption">Круто</h3>
+          <p class="advantages__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.
+          </p>
+        </li>
+        <li class="advantages__item advantages__item--expensive carousel-cell">
+          <h3 class="advantages__caption">Дорого</h3>
+          <p class="advantages__description">Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
+        </li>
+      </ul>  
+    </section>
+    
+    <section class="news">
+      <div class="news__wrapper">
+        <header class="header-panel">
+          <h2 class="header-panel__heading">
+            Новости и акции
+          </h2>
+          <a href="#" class="header-panel__button button">Показать все</a>
+        </header>
+        <ul class="news__items">
+          <li class="news__item new">
+            <time class="new__date"><span class="new__number">29</span>Сент</time>
+            <a class="new__text">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</a>
+          </li>
+          <li class="news__item new">
+            <time class="new__date"><span class="new__number">19</span>Сент</time>
+            <a class="new__text">В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!</a>
+          </li>
+          <li class="news__item news__item--tablet new">
+            <time class="new__date"><span class="new__number">9</span>Сент</time>
+            <a class="new__text">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</a>
+          </li>
+        </ul>
+      </div>
+      <a href="#" class="header-panel__button header-panel__button--mobile button">Показать все</a>
+    </section>
+    <section class="reviews">
+      <div class="reviews__wrapper">
+        <header class="header-panel">
+          <h2 class="header-panel__heading">
+            Отзывы о нас
+          </h2>
+          <a href="#" class="header-panel__button button">Оставить свой</a>
+        </header>
+        <div class="reviews__carousel">
+          <ul class="reviews__items">
+            <li class="reviews__item review">
+              <div class="review__photo-wrapper">
+                <img src="img/review-1.jpg" alt="Фотография клиента" class="review__photo">
+              </div>
+              <div class="review__text-wrapper">
+                <strong class="review__name">Трэвис Баркер</strong>
+                <p class="review__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+              </div>
+            </li>            
+            <li class="reviews__item review">
+              <div class="review__photo-wrapper">
+                <img src="img/review-1.jpg" alt="Фотография клиента" class="review__photo">
+              </div>
+              <div class="review__text-wrapper">
+                <strong class="review__name">Трэвис Баркер</strong>
+                <p class="review__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+              </div>
+            </li>            
+            <li class="reviews__item review">
+              <div class="review__photo-wrapper">
+                <img src="img/review-1.jpg" alt="Фотография клиента" class="review__photo">
+              </div>
+              <div class="review__text-wrapper">
+                <strong class="review__name">Трэвис Баркер</strong>
+                <p class="review__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+              </div>
+            </li>            
           </ul>
-          <a href="#" class="button about-us__button">Подробнее о компании</a>
-        </section>          
-        
-        <section class="main-content__contacts contacts">      
-          <h2 class="section-heading">Контакты</h2>
-          <p class="contacts__description">Вы можете забрать товар сами, заехав в наш офис:</p>
-          <div class="map__map-wrapper">
-            <a class="map__static-map" href="https://yandex.ru/maps/?um=constructor%3Aa3d1e163e86c1de67b7e936b72a46a779e953db12b4d9442d9cfce7813c9e2ee&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aa3d1e163e86c1de67b7e936b72a46a779e953db12b4d9442d9cfce7813c9e2ee&amp;width=300&amp;height=158&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
-          </div>
-          <a href="#" class="button contacts__button">Заблудились? Напишите нам!</a>
-        </section>
+        </div>
       </div>
     </section>
   </main>
   
-  <footer class="main-footer">
-    <div class="page__section page__section--theme--dark">
-      <div class="page__content main-footer__menu footer-menu">
-        <a class="logo logo--big">
-          <img class="logo__image" src="img/techno-footer-logo.svg" width="220" height="68" alt="Логотип магазина Техномарт">
-        </a>
-        <ul class="footer-menu__links link-menu">
-          <li class="link-menu__item">
-            <a href="#" class="link-menu__link">Компания</a>
-          </li><li class="link-menu__item">
-            <a href="#" class="link-menu__link">Новости</a>
-          </li><li class="link-menu__item">
-            <a href="#" class="link-menu__link">Каталог</a>
-          </li><li class="link-menu__item">
-            <a href="#" class="link-menu__link">Доставка</a>
-          </li><li class="link-menu__item">
-            <a href="#" class="link-menu__link">Контакты</a>
-          </li>
-        </ul>
-        <div class="plain-info">
-          <p class="plain-info__addr">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <a class="plain-info__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
+  <footer class="page__footer">
+  <div class="main-footer">
+    <div class="main-footer__wrapper main-footer__wrapper--tablet">
+      <div class="main-footer__info">
+        <p class="main-footer__name">Барбершоп Бородинский</p>
+        <p class="main-footer__address">г. Санкт-Петербург, ул. Большая Конюшенная 19/8 <br>
+        </p>
+        <span class="main-footer__tel-caption">Тел.: </span><a class="main-footer__tel" href="tel:+78125556666">+7 (812) 555-66-66</a>
+      </div>            
+      <div class="developed-by developed-by--tablet">
+          <p class="developed-by__text">Разработано:</p>
+          <a class="developed-by__link" href="http://github.com/avalsoff">avalsoff</a>
         </div>
-        <ul class="footer-menu__links link-menu link-menu--accent">
-          <li class="link-menu__item">
-            <a href="#" class="link-menu__link">Материалы</a>
-          </li><li class="link-menu__item">
-            <a href="#" class="link-menu__link">Техника</a>
-          </li><li class="link-menu__item">
-            <a href="#" class="link-menu__link">Инструмент</a>
-          </li><li class="link-menu__item">
-            <a href="#" class="link-menu__link">Спецпредложения</a>
-          </li>
-        </ul>
-      </div> 
     </div>
-    <div class="page__section page__section--theme--darkest">
-      <div class="page__content main-footer__info info-bar">
-        <p class="copyright info-bar__copyright">© 2010–2017 Компания «Техномарт» Все права защищены</p>
-        
-        <ul class="social">
-          <li class="social__item">
-            <a href="http://vk.com" class="social__link">Вконтакте
-              <img src="img/social-fb-icon.svg" alt="Иконка facebook" class="social__logo-icon">
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="http://facebook.com" class="social__link">Facebook
-              <img src="img/social-vk-icon.svg" alt="Иконка вконтакте" class="social__logo-icon">
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="http://instagram.com" class="social__link">Instagram
-              <img src="img/social-insta-icon.svg" alt="Иконка instagram" class="social__logo-icon">
-            </a>
-          </li>
-        </ul>
-        <div class="info-bar__feedback feedback">
-          <p class="feedback__text">
-            Обратная связь: <br>
-            <a class="feedback__link" href="mailto:mail@protonmail.com">mail@protonmail.com</a>
-          </p>
-          <p class="feedback__text">
-            Разработано — <br>
-            <a class="feedback__link" href="http://github.com/avalsoff">avalsoff</a>              
-          </p>
-        </div>
+    <ul class="main-footer__socials">
+      <li class="main-footer__social-item">
+        <a class="main-footer__social main-footer__social--vk" href="http://vk.com">Вконтакте</a>
+      </li>
+      <li class="main-footer__social-item">
+        <a class="main-footer__social main-footer__social--fb" href="http://facebook.com">Facebook</a>
+      </li>
+      <li class="main-footer__social-item">
+        <a class="main-footer__social main-footer__social--inst" href="http://instagram.com">Instagram</a>
+      </li>
+    </ul>
+    <div class="main-footer__wrapper">      
+      <div class="developed-by">
+        <p class="developed-by__text">Разработано:</p>
+        <a class="developed-by__link" href="http://github.com/avalsoff">avalsoff</a>
       </div>
     </div>
-  </footer>
-  
-  <section class="modal">
-    <form  class="write-us" method="POST" action="google.com">
-      <div class="write-us__sign">
-        <div class="write-us__input-wrapper">
-          <label class="write-us__label" for="write-us-name">Ваше имя
-          </label>
-          <input class="write-us__input" type="text" name="name" id="write-us-name" placeholder="Представьтесь, пожалуйста">
-        </div>
-        <div class="write-us__input-wrapper">
-          <label class="write-us__label" for="write-us-email">Ваш e-mail
-          </label>
-          <input class="write-us__input" type="text" name="email" id="write-us-email" placeholder="Для отправки ответа">
-        </div>
-      </div>      
-      <label class="write-us__letter-label" for="write-us-letter">Текст письма
-      </label>
-      <textarea class="write-us__letter" name="letter" cols="60" rows="5" id="write-us-letter" placeholder="В свободной форме"></textarea>
-      <div class="write-us__submit-wrapper">
-        <button class="button write-us__submit" type="submit">Отправить</button>
-      </div>
-    </form>
-    <button class="close-btn js-write-us__close-btn">Закрыть</button>
-  </section>
-  
-  
-  <section class="modal">
-    
-    <div class="modal-map">
-      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa3d1e163e86c1de67b7e936b72a46a779e953db12b4d9442d9cfce7813c9e2ee&amp;width=940&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
-      <img class="modal-map__fallback-img" src="img/big-map-fallback.jpg" alt="Наш адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-    </div>
-    <button class="close-btn close-btn--outside js-modal-map__close-btn">Закрыть</button>
-  </section>
-  
-  <script src="js/index.js"></script>
-  <script>indexPage()</script> 
+  </div>
+</footer>
+  <script src="js/index.min.js"></script>
 </body>
-
 </html>
